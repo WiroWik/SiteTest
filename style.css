@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html{
+    padding: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: color 1000ms;
+    
+}
+
+body{
+    transition: background-color 1000ms;
+}
+
+.container{
+    min-height: auto;
+    margin: -50px;
+    padding: 50px;
+    background-color: rgb(228, 228, 228);
+    align-content: center;
+    position: static;
+    transition: background-color 1000ms;
+}
+.titre{
+    max-width: auto;
+    max-height: 500px;
+    margin: auto;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    align-content: center;
+    background-color: rgb(218, 218, 218);
+    animation-name: initTitle;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.73,.04,.33,.98);
+    transition: background-color 1000ms;
+
+}
+
+#mainTitle{
+   max-width: 1500px;
+   max-height: auto;
+   text-align: center; 
+   font-size: 100px;
+   padding: 25px;
+   animation-name: fadeInInit1;
+   animation-duration: 2s;
+   animation-timing-function: cubic-bezier(.73,.04,.33,.98);
+   margin: auto;
+   position: relative;
+}
+
+#subTitle{
+    max-width: 1000px;
+    min-height: auto;
+    text-align: center; 
+    font-size: 50px;
+    margin-top: 20px;
+    border-width: 10px;
+    border-radius: 100px;
+    padding: 25px;
+    margin: auto;
+    animation-name: fadeInInit2;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.73,.04,.33,.98);
+    position: relative;
+ }
+
+.lineDeco{
+    height: 1px;
+    width: 800px;
+    background-color: black;
+    margin: auto;
+    animation-name: initLine;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.73,.04,.33,.98);
+    position: relative;
+}
+
+.choix{
+    max-height: 350px;
+    min-height: 350px;
+    padding: 10px;
+}
+
+.gridasse{
+    min-height: auto;
+    width: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+    align-content: center;
+    margin: 10px auto; 
+}
+
+.options{
+    min-width: 300px;
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(218, 218, 218);
+    border-width: 5px;
+    border-color:  rgba(218, 218, 218, 0);
+    border-style: solid;
+    z-index: 1;
+    transition: transform 500ms, border-bottom-left-radius 500ms, border-top-right-radius 500ms, border-color 500ms, border-style 500ms, background-color 1000ms;
+}
+
+.options:hover{
+    transform: translateY(-10px);
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-width: 5px;
+    border-color: rgb(146, 146, 146);
+    border-style: solid;
+    cursor: pointer;
+    transition: transform 500ms, border-bottom-left-radius 500ms, border-top-right-radius 500ms, border-color 500ms, border-style 500ms, background-color 1000ms;
+}
+
+#legal{
+    grid-column: 1;
+    grid-row: 1;
+    animation-name: fadeInInit2;
+    animation-duration: 2500ms;
+    animation-timing-function: cubic-bezier(.73,.04,.33,.98);
+}
+
+#illegal{
+    grid-column: 2;
+    grid-row: 1;
+    animation-name: fadeInInit1;
+    animation-duration: 2500ms;
+    animation-timing-function: cubic-bezier(.73,.04,.33,.98);
+}
+
+.desc{
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin: auto;
+    transition: transform 500ms;
+
+}
+
+#descLegal{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 10px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: auto;
+    animation-name: fadeInInit2Desc;
+    animation-duration: 2500ms;
+    animation-timing-function: cubic-bezier(.73,.04,.33,.98);
+    margin: auto;
+}
+
+#descIllegal{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 10px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: auto;
+    animation-name: fadeInInit1Desc;
+    animation-duration: 2500ms;
+    animation-timing-function: cubic-bezier(.73,.04,.33,.98);
+    margin: auto;
+}
+
+.moveDesc{
+    transform: translateY(150px);
+    transition: transform 500ms;
+}
+
+#darkButton{
+    font-size: 20px;
+    width: 200px;
+    height: 100px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: none;
+    background-color: rgb(218, 218, 218);
+    outline: none;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(146, 146, 146, 0);
+    animation-name: fadeInInit2;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(.73,.04,.33,.98);
+    transition: background-color 1000ms, border-color 1000ms, transform 1000ms;
+    font-family: 'Roboto', sans-serif;
+}
+
+#darkButton:hover{
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-width: 5px;
+    border-color: rgb(146, 146, 146);
+    border-style: solid;
+    cursor: pointer;
+    transition: background-color 1000ms, border-color 1000ms, transform 1000ms;
+}
+
+.spinny{
+    transform: rotate(360deg);
+    
+}
+
+/*Dark Mode */
+.darkModBody{
+    background-color: rgb(27, 27, 27);
+    color: rgb(46, 46, 46);
+}
+
+.darkContain{
+    background-color: rgb(22, 22, 22);
+}
+
+.darkTitle{
+    background-color: rgb(20, 20, 20);
+}
+
+.darkLine{
+    background-color: rgb(46, 46, 46);
+}
+
+.darkChoices{
+    background-color: rgb(20, 20, 20);
+}
+
+.darkChoices:hover{
+    border-color: rgb(15, 15, 15);
+}
+
+.darkerButton{
+    background-color: rgb(20, 20, 20) !important;
+    color: rgb(46, 46, 46) !important;
+}
+
+.darkerButton:hover{
+    border-color: rgb(15, 15, 15) !important;
+}
+/*Animations*/
+
+@keyframes fadeInInit1{
+    0%{
+        opacity: 0%;
+        transform: translate(1000px);
+    }
+
+    50%{
+        opacity: 100%;
+    }
+    
+    100%{
+        transform: translate(initial);
+    }
+}
+
+@keyframes fadeInInit2{
+    0%{
+        opacity: 0%;
+        transform: translate(-1000px);
+    }
+
+    50%{
+        opacity: 100%;
+    }
+    
+    100%{
+        transform: translate(initial);
+    }
+}
+/*Pour les descriptions*/
+@keyframes fadeInInit1Desc{
+    0%{
+        opacity: 0%;
+        transform: translate(1000px);
+    }
+    
+    100%{
+        opacity: 100%;
+        transform: translate(initial);
+    }
+}
+
+@keyframes fadeInInit2Desc{
+    0%{
+        opacity: 0%;
+        transform: translate(-1000px);
+    }
+    
+    100%{
+        opacity: 100%;
+        transform: translate(initial);
+    }
+}
+/*UUUUUUUUUUUUUUU*/
+@keyframes initLine{
+    0%{
+        transform: scaleX(0);
+    }
+
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+@keyframes initTitle{
+    0%{
+        border-radius: 1000px;
+        opacity: 0%;
+    }
+
+    100%{
+        border-radius: 0px;
+        opacity: 100%;
+    }
+}
